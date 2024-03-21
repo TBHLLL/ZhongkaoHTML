@@ -146,20 +146,16 @@
                 '<div class="countdown-box"><h1>Minutes</h1><span>' + minutes1 + '</span></div>' +
                 '<div class="countdown-box"><h1>Seconds</h1><span>' + seconds1 + '</span></div>';
 
-            document.getElementById("countdown2").innerHTML =
-                '<div class="countdown-box"><h1>Days</h1><span>' + days2 + '</span></div>'
+            
             if (distance < 0) {
                 clearInterval(countdownFunction);
-                document.getElementById("countdown").innerHTML = "2024.6.12  Today!";
+                document.getElementById("countdown").innerHTML = '<div class="countdown-box"><h1>2024.6.12  Today!</h1></div>';
             }
             if (distance1 < 0) {
                 clearInterval(countdownFunction);
                 document.getElementById("countdown1").innerHTML = "2024.4.20 Today!";
             }
-            if (distance2 < 0) {
-                clearInterval(countdownFunction);
-                document.getElementById("countdown2").innerHTML = "2024.3.21 Today!";
-            }
+            
         }, 1000);
     </script>
 </body>
