@@ -39,7 +39,7 @@ body {
 .countdown-title {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .countdown-tbox {
@@ -53,7 +53,7 @@ body {
 .countdown-container {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .countdown-box {
