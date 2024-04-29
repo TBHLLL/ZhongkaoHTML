@@ -48,13 +48,13 @@
             var distance = countDownDate - now;
             var distance_1 = countDownDate_ti - now;
             var distance2 = countDownDate_3 - now;
+            let date = new Date(),
+            year = date.getFullYear(),
+            month = date.getMonth(),
+            strDate = date.getDate();
 
             var cdistance = now - pastdate;
             var weeks = Math.floor(cdistance / (1000 * 60 * 60 * 24 * 7) + 1);
-            // var ndays = Math.floor(now / (1000 * 60 * 60 * 24));
-            // var nhours = Math.floor((now % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            // var nminutes = Math.floor((now % (1000 * 60 * 60)) / (1000 * 60));
-            // var nseconds = Math.floor((now % (1000 * 60)) / 1000);
 
             var days = Math.floor(distance / (1000 * 60 * 60 * 24));
             var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -70,11 +70,11 @@
             
 
             document.getElementById("weekcount").innerHTML =
-                '<div class="countdown-box"><h1>Weeks</h1><span>' + weeks + '</span></div>';
-                // '<div class="countdown-box"><h1>Days</h1><span>' + ndays + '</span></div>' +
-                // '<div class="countdown-box"><h1>Hours</h1><span>' + nhours + '</span></div>' +
-                // '<div class="countdown-box"><h1>Minutes</h1><span>' + nminutes + '</span></div>' +
-                // '<div class="countdown-box"><h1>Seconds</h1><span>' + nseconds + '</span></div>';
+                '<div class="countdown-box"><h1>Weeks</h1><span>' + weeks + '</span></div>' + 
+                '<div class="countdown-box"><h1>年</h1><span>' + year + '</span></div>' +
+                '<div class="countdown-box"><h1>月</h1><span>' + month + '</span></div>' +
+                '<div class="countdown-box"><h1>日</h1><span>' + strDate + '</span></div>';
+                
             if (distance < 0) {
                 document.getElementById("countdown").innerHTML = '<div class="countdown-box"><h1>已抵达 2024 中考!</h1></div>';
             } else {
